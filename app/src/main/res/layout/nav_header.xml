@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:padding="30dp"
+    android:background="@drawable/gmo"
+    >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/youth"
+        android:id="@+id/nav_image"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_toRightOf="@id/nav_image"
+        android:text="HOG-DRUNK"
+        android:textSize="20dp"
+        android:textColor="#fcf7f7"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nav_image"
+        android:layout_marginTop="10dp"
+        android:textColor="#fcf7f7"
+        android:text="You're an 11,and I'm a 4"
+        />
+
+</RelativeLayout>
