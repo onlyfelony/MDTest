@@ -27,13 +27,18 @@ public class FruitActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.fruit_toolbar);
         TextView fruitContent = findViewById(R.id.fruit_content);
 
-        Intent intent = getIntent();
+ /*       Intent intent = getIntent();
         String fruitName = intent.getStringExtra(FRUIT_NAME);
-        int fruitId = intent.getIntExtra(FRUIT_ID,0);
+        int fruitId = intent.getIntExtra(FRUIT_ID,0);*/
+
+       // Fruit cfruit = (Fruit) getIntent().getSerializableExtra("fruit_data");
+        Fruit cfruit =  getIntent().getParcelableExtra("fruit_data");
+        String fruitName = cfruit.getFruitname();
+        int fruitId = cfruit.getImageId();
 
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
-        if(actionBar!=null){
+        if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);//默认是一个箭头的图标
         }
 
@@ -47,7 +52,7 @@ public class FruitActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case android.R.id.home:
                 finish();
                 return true;
@@ -59,7 +64,7 @@ public class FruitActivity extends AppCompatActivity {
     private String generateContent(String fruitName) {
         StringBuilder content = new StringBuilder();
 
-        for(int i=0;i<500;i++){
+        for (int i = 0; i < 500; i++) {
             content.append(fruitName);
         }
 

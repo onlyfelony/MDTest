@@ -57,8 +57,10 @@ public class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.FruitViewHol
                  Fruit fruit = fruitList.get(position);
 
                  Intent intent = new Intent(tcontext,FruitActivity.class);
-                 intent.putExtra(FruitActivity.FRUIT_NAME,fruit.getFruitname());
-                 intent.putExtra(FruitActivity.FRUIT_ID,fruit.getImageId());
+                // intent.putExtra(FruitActivity.FRUIT_NAME,fruit.getFruitname());
+                 //intent.putExtra(FruitActivity.FRUIT_ID,fruit.getImageId());
+                 intent.putExtra("fruit_data",fruit);
+
                  tcontext.startActivity(intent);
              }
          });
